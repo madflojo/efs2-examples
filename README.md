@@ -1,2 +1,3 @@
 # Efs2 Examples
-A collection of example Efs2files and resources
+
+This repository is a collection of example `Efs2file`s and resources for [Efs2](https://github.com/madflojo/efs2). 
