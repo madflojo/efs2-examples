@@ -1,2 +1,2 @@
-# efs2-examples
+# Efs2 Examples
 A collection of example Efs2files and resources

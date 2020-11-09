@@ -1,0 +1,16 @@
+# Install and Configure NGINX
+
+# Run apt-get update
+RUN apt-get update --fix-missing && apt-get -y upgrade
+
+# Install nginx
+RUN apt-get install nginx
+
+# Deploy Config files
+PUT example.com.conf /etc/nginx/sites-available/example.com.conf 0644
+
+# Create a Symlink
+RUN ln -s /etc/nginx/sites-available/example.com.conf /etc/nginx/sites-enabled/example.com.conf
+
+# Restart NGINX
+RUN systemctl restart nginx
