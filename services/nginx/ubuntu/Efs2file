@@ -4,7 +4,7 @@
 RUN apt-get update --fix-missing && apt-get -y upgrade
 
 # Install nginx
-RUN apt-get install nginx
+RUN apt-get -y install nginx
 
 # Deploy Config files
 PUT example.com.conf /etc/nginx/sites-available/example.com.conf 0644

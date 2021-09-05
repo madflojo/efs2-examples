@@ -3,8 +3,8 @@
 # Run apt-get update
 RUN apt-get update --fix-missing && apt-get -y upgrade
 
-# Install nginx
-RUN apt-get install apache2
+# Install apache
+RUN apt-get -y install apache2
 
 # Deploy Config files
 PUT example.com.conf /etc/apache2/sites-available/example.com.conf 0644
@@ -12,5 +12,5 @@ PUT example.com.conf /etc/apache2/sites-available/example.com.conf 0644
 # Create a Symlink
 RUN a2ensite example.com.conf
 
-# Restart NGINX
+# Restart apache
 RUN service apache2 restart
